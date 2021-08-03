@@ -1,0 +1,17 @@
+.OpenCloseTriangle {
+  position: absolute;
+  left: -1.125rem;
+  width: 1.125rem;
+  font-size: 0.625rem;
+  color: rgb(75, 81, 85);
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 0;
+  user-select: none;
+  &.open {
+    transform: rotate(90deg);
+  }
+  &.hovered {
+    opacity: 1;
+  }
+}
