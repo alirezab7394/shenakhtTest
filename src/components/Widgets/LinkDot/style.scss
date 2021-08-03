@@ -1,0 +1,12 @@
+.LinkDot {
+  width: 1.125rem;
+  height: 1.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &--main {
+    display: block;
+    color: rgb(75, 81, 85);
+    margin-bottom: 0.25rem;
+  }
+}
