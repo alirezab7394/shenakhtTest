@@ -1,0 +1,30 @@
+.Task {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &--input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    white-space: pre-wrap;
+    line-height: 24px;
+    font-size: 1rem;
+  }
+  &--container {
+    padding-left: 1.25rem;
+    margin-left: 0.5rem;
+    border-left: 1px solid rgb(236, 238, 240);
+    animation: openContainerAnimation 0.2s;
+    transform-origin: top;
+    overflow: hidden;
+  }
+}
+@keyframes openContainerAnimation {
+  0% {
+    transform: scale(1, 0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
