@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/shenakht/static/css/main.5039905a.chunk.css",
-    "main.js": "/shenakht/static/js/main.1b9f0f8b.chunk.js",
-    "main.js.map": "/shenakht/static/js/main.1b9f0f8b.chunk.js.map",
-    "runtime-main.js": "/shenakht/static/js/runtime-main.bc1784c0.js",
-    "runtime-main.js.map": "/shenakht/static/js/runtime-main.bc1784c0.js.map",
-    "static/js/2.fbdfc4e5.chunk.js": "/shenakht/static/js/2.fbdfc4e5.chunk.js",
-    "static/js/2.fbdfc4e5.chunk.js.map": "/shenakht/static/js/2.fbdfc4e5.chunk.js.map",
-    "static/js/3.2c7e18a0.chunk.js": "/shenakht/static/js/3.2c7e18a0.chunk.js",
-    "static/js/3.2c7e18a0.chunk.js.map": "/shenakht/static/js/3.2c7e18a0.chunk.js.map",
-    "index.html": "/shenakht/index.html",
-    "static/css/main.5039905a.chunk.css.map": "/shenakht/static/css/main.5039905a.chunk.css.map",
-    "static/js/2.fbdfc4e5.chunk.js.LICENSE.txt": "/shenakht/static/js/2.fbdfc4e5.chunk.js.LICENSE.txt",
-    "static/media/arrow_back_ios.2a0a5cca.svg": "/shenakht/static/media/arrow_back_ios.2a0a5cca.svg",
-    "static/media/home.614b721f.svg": "/shenakht/static/media/home.614b721f.svg"
+    "main.css": "/shenakhtTest/static/css/main.5039905a.chunk.css",
+    "main.js": "/shenakhtTest/static/js/main.24c4119e.chunk.js",
+    "main.js.map": "/shenakhtTest/static/js/main.24c4119e.chunk.js.map",
+    "runtime-main.js": "/shenakhtTest/static/js/runtime-main.0c7a3ece.js",
+    "runtime-main.js.map": "/shenakhtTest/static/js/runtime-main.0c7a3ece.js.map",
+    "static/js/2.fbdfc4e5.chunk.js": "/shenakhtTest/static/js/2.fbdfc4e5.chunk.js",
+    "static/js/2.fbdfc4e5.chunk.js.map": "/shenakhtTest/static/js/2.fbdfc4e5.chunk.js.map",
+    "static/js/3.2c7e18a0.chunk.js": "/shenakhtTest/static/js/3.2c7e18a0.chunk.js",
+    "static/js/3.2c7e18a0.chunk.js.map": "/shenakhtTest/static/js/3.2c7e18a0.chunk.js.map",
+    "index.html": "/shenakhtTest/index.html",
+    "static/css/main.5039905a.chunk.css.map": "/shenakhtTest/static/css/main.5039905a.chunk.css.map",
+    "static/js/2.fbdfc4e5.chunk.js.LICENSE.txt": "/shenakhtTest/static/js/2.fbdfc4e5.chunk.js.LICENSE.txt",
+    "static/media/arrow_back_ios.2a0a5cca.svg": "/shenakhtTest/static/media/arrow_back_ios.2a0a5cca.svg",
+    "static/media/home.614b721f.svg": "/shenakhtTest/static/media/home.614b721f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.bc1784c0.js",
+    "static/js/runtime-main.0c7a3ece.js",
     "static/js/2.fbdfc4e5.chunk.js",
     "static/css/main.5039905a.chunk.css",
-    "static/js/main.1b9f0f8b.chunk.js"
+    "static/js/main.24c4119e.chunk.js"
   ]
 }
