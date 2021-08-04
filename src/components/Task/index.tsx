@@ -1,7 +1,9 @@
-import React, { memo, useMemo, useState } from "react";
 import LinkDot from "../Widgets/LinkDot";
 import OpenCloseTriangle from "../Widgets/OpenCloseTriangle";
+import TaskInput from "../Widgets/TaskInput/TaskInput";
 import useGetTasksList from "../hooks/useTasks";
+import SubTasks from "./SubTasks";
+import React, { memo, useMemo, useState } from "react";
 import "./style.scss";
 
 export interface TaskProps {
@@ -9,20 +11,23 @@ export interface TaskProps {
   id: number;
   parent: null | number;
 }
-function Task({ title = "", id, parent }: TaskProps) {
-  const { tasks, editTask } = useGetTasksList();
-  const [value, setValue] = useState(title);
+interface Props extends TaskProps {
+  beforeSibling: TaskProps;
+  rootParentID?: null | number;
+}
+
+function Task({ title = "", id, parent, beforeSibling, rootParentID = null }: Props) {
+  const { tasks, editTask, addNewTask, removeTask, changeParent } = useGetTasksList();
   const [showChildren, setShowChildren] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   // set the context value onBlur
-  const onBlur = () => {
+  const onBlur = (value: string) => {
     editTask(id, value);
   };
-  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
-  };
+
   const childrenList = useMemo(() => tasks.filter((item) => item.parent === id), [tasks, id]);
-  const hasChildren = !!childrenList.length;
+  const hasChildren = childrenList.length > 0;
+
   return (
     <>
       <div className="Task" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
@@ -33,16 +38,20 @@ function Task({ title = "", id, parent }: TaskProps) {
             onChange={() => setShowChildren(!showChildren)}
           />
         )}
-        <LinkDot />
-        <input className="Task--input" value={value} onChange={onChange} onBlur={onBlur} />
+        <LinkDot hasChildren={hasChildren} isOpen={showChildren} id={id} />
+        <TaskInput
+          value={title}
+          onBlur={onBlur}
+          addNewTask={addNewTask}
+          removeTask={removeTask}
+          id={id}
+          parentID={parent}
+          beforeSibling={beforeSibling}
+          changeParent={changeParent}
+          rootParentID={rootParentID}
+        />
       </div>
-      {showChildren && (
-        <div className={`Task--container`}>
-          {childrenList.map((item) => (
-            <Task {...item} key={item.id} />
-          ))}
-        </div>
-      )}
+      <SubTasks showChildren={showChildren} childrenList={childrenList} rootParentID={parent} />
     </>
   );
 }
