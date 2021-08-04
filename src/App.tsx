@@ -1,16 +1,16 @@
-import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
 import Layout from "./components/Layout";
-import TasKProvider from "./components/Providers/TasksProvider";
-import TaskContainer from "./components/TaskContainer";
+import Routes from "./components/Routes";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Layout>
-        <TasKProvider>
-          <TaskContainer />
-        </TasKProvider>
-      </Layout>
+      <Router basename={process.env.PUBLIC_URL + "/"}>
+        <Layout>
+          <Routes />
+        </Layout>
+      </Router>
     </div>
   );
 }
