@@ -4,9 +4,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+  vertical-align: center;
+  transition: all 0.2s;
+  user-select: none;
+  cursor: pointer;
+  margin-right: 0.25rem;
   &--main {
     display: block;
     color: rgb(75, 81, 85);
-    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.1875rem;
+  }
+  &.light {
+    background-color: rgb(229, 234, 236);
+  }
+  &:hover {
+    background-color: rgb(217, 222, 224);
   }
 }
