@@ -1,5 +1,5 @@
 {
   "trailingComma": "es5",
   "printWidth": 120,
-  "importOrder": ["^react$", "^@components/(.*)$", "^((?![@])(?!react$)(?!./styles$)).*"]
+  "importOrder": ["^react$", "^react-router-dom$", "^@components/(.*)$", "./style.*", "/*.css"]
 }
