@@ -1,0 +1,19 @@
+.TaskInput {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  white-space: pre-wrap;
+  line-height: 24px;
+  font-size: 1rem;
+  font-weight: 200;
+  width: 100%;
+  overflow-wrap: break-word;
+
+  &.title {
+    width: 100%;
+    text-align: left;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
